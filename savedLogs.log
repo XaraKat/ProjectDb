@@ -1,0 +1,16 @@
+[2021-05-31T14:54:47.603] [DEBUG] default - listening on port: 8080
+[2021-05-31T14:55:21.355] [DEBUG] default - listening on port: 8080
+[2021-05-31T14:56:50.128] [INFO] default - { name: 'coco', description: 'comment' }
+[2021-05-31T14:58:30.107] [DEBUG] default - listening on port: 8080
+[2021-05-31T14:58:43.124] [INFO] default - { name: 'anna', description: 'koulkieca' }
+[2021-05-31T14:59:38.169] [INFO] default - { name: '  ', description: '   ' }
+[2021-05-31T16:08:35.769] [DEBUG] default - listening on port: 8080
+[2021-05-31T16:08:48.139] [INFO] default - { name: 'mamaka', description: 'jesus' }
+[2021-05-31T16:09:56.858] [INFO] default - { name: 'lana', description: 'del rey' }
+[2021-05-31T16:12:28.201] [DEBUG] keep - listening on port: 8080
+[2021-06-01T09:22:11.613] [DEBUG] keep - listening on port: 8080
+[2021-06-01T09:23:27.320] [INFO] keep - { name: 'dvzd', description: 'zfvzagfv' }
+[2021-06-01T09:26:40.213] [INFO] keep - { name: 'mana', description: 'alimera\n' }
+[2021-06-01T09:59:14.404] [DEBUG] keep - listening on port: 8080
+[2021-06-01T10:00:42.955] [INFO] keep - { name: 'bamia', description: 'fagito' }
+[2021-06-01T10:00:53.835] [INFO] keep - { name: 'omega', description: 'fzsda' }
