@@ -1,0 +1,40 @@
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import './plugins/element.js'
+import ElementUI from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/en'
+
+
+
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
+Vue.use(ElementUI, { locale })
+
+
+
+
+ 
+ "doki.sticker.path":  "C:\\Users\chari\Downloads\https___i.pinimg.com_originals_1c_6f_2f_1c6f2fa8aee73df1a3ce4e4e7c2e9a33.png"
+ 
+ "C:\Users\chari\Downloads\https___i.pinimg.com_originals_1c_6f_2f_1c6f2fa8aee73df1a3ce4e4e7c2e9a33.png"
+ 
+ "C:\Users\chari\Pictures\resized.png",
+
+ 
+360skin1
+
+resized.png
+ 
+ hehe.png
+ 
+ nezuko_OP.png
+ 
+ C:\Users\chari\Downloads\resized.png
+ 

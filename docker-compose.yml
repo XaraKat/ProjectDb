@@ -1,0 +1,35 @@
+version: "3.7"
+services: 
+  db:
+    container_name: pg
+    image: postgres
+    environment: 
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: 'postgres'
+      POSTGRES_DB: 'Mydb'
+    volumes: 
+      # - dbdata:/var/lib/postgresql/data  
+      - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+    ports: 
+      - "5433:5432"
+        
+  webserver: 
+    image: wss-test-dc
+    environment:
+      PG_HOST: pg
+      PG_PORT: 5432
+    depends_on:
+      - db
+    ports: 
+      - "8080:8080"
+     
+  app:
+    image: app-img
+    depends_on: 
+      - webserver
+    ports:
+      - "3000:8080"
+
+volumes: 
+  docker_postgres_init.sql:
+  # dbdata:

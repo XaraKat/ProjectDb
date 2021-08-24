@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT ||8080
 const db = require('./database')
 const cors = require('cors')
 var log4js = require("log4js");
@@ -10,7 +10,7 @@ app.use(express.json());
 log4js.configure({
     appenders: {
       DefaultLogs: { type: 'file', filename: 'savedLogs.log' },
-      Keeper: { type: 'datefile', filename: 'sLogs.log' ,pattern:'.yyyy-MM-dd-hh'},
+      Keeper: { type: 'dateFile', filename: 'sLogs.log' ,pattern:'.yyyy-MM-dd-hh'},
       Errors: { type: 'file', filename: 'errors.log' },
       console: { type: 'console' }
     },
@@ -25,7 +25,9 @@ log4js.configure({
 const errLogger = log4js.getLogger('app')
 const defLogger = log4js.getLogger('keep')
 // app.listen('8080')
-app.listen(port, () => defLogger.debug(`listening on port: ${port}`))
+app.listen(port, () => console.debug(`listening on port: ${port}`))
+// app.listen(port, () => errLogger.debug(`listening on port: ${port}`))
+
 
 app.get('/',function(req,res){
     try{
@@ -33,19 +35,15 @@ app.get('/',function(req,res){
             res.send(data)
         })
     }catch(e){
-        errLogger.error(e)
-        errLogger.error("Error sending data to db")
-    }
-   
-    
+      console.error(e)
+      console.error("Error sending data to db")
+    }    
 })
 
-
-app.post('/', function(req, res) {
-     
-     db.insert(req.body).into('info').then(function(data){
-      defLogger.info(req.body)
-      res.sendStatus(200)
-    })
+app.post('/', function(req, res) {   
+  db.insert(req.body).into('test').then(function(data){
+    console.info(req.body)
+    res.sendStatus(200)
+  })
 });
 
